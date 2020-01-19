@@ -1,1 +1,1 @@
-# used for the cs labs not creative project
+# Used for the cs labs not creative project
