@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Morgan's Portfolio</title>
+    </head>
+    <body>
+        <!--Page Navagation -->
+        <div id="nav-container" class="bg-light"></div>
+        <div class="container">
+            <div class="jumbotron mt-3 bg-light">
+                <h1 class="text-center">Welcome To Morgan's Portfolio</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="album py-2 bg-light mb-3">
+                <div class="container no-list-decortions">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                                <div class="card-body">
+                                    <h3 class="text-center">About</h3>
+                                    <p class="text-center">Find out about me!</p>
+                                    <a href="about.html" class="btn btn-info btn-block" role="button">Find Out</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                                <div class="card-body">
+                                    <h3 class="text-center">Certifications</h3>
+                                    <p class="text-center">Look at my Certifcations</p>
+                                    <a href="certifications.html" class="btn btn-info btn-block" role="button">Find Out</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                                <div class="card-body">
+                                    <h3 class="text-center">Projects</h3>
+                                    <p class="text-center">Look at my Past Projects</p>
+                                    <a href="projects.html" class="btn btn-info btn-block" role="button">Find Out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="foot-container" class="bg-light"></div>
+        <script>
+            window.onload = function () {
+                $.get("nav.html", function (data) {
+                    $("#nav-container").html(data);
+                })
+                $.get("foot.html", function (data) {
+                    $("#foot-container").html(data);
+                })
+            }
+        </script>
+        <script src="js/jquery-3.4.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    </body>
+</html>
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Morgan's Portfolio</title>
+    </head>
+    <body>
+        <!--Page Navagation -->
+        <div id="nav-container" class="bg-light"></div>
+        <div class="container">
+            <div class="jumbotron mt-1 mb-1 bg-light">
+                <h1 class="text-center">Random Recipe Finder</h1>
+                <p class="text-center">One of the classes I had in college had us develop a mobile application. </p>
+                <p class="text-center">The appliation calls the spoonacular API to generate the recipe infomation.</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <form>
+                <fieldset>
+                    <legend class="text-center">This allow you to search for a recipe/s. <br /> If left blank it will generate a random recipe</legend>
+                    <label class="pr-2">Please select a search type:</label>
+                    <select id="selector">
+                        <option value="query">Single ingredient</option>
+                        <option value="cuisine">Food type</option>
+                    </select>
+                    <p></p>
+                    <label class="pr-2">Please enter a value: </label>
+                    <input id="recipeQuery" type="text"></input>
+                    <p></p>
+                    <label class="pr-2">Use the slider to get 1-10 recipes</label>
+                    <input type="range" min="1" max="10" id="numRecipes">
+                    <p></p>
+                    <input id="getRecipes" type="submit" value="Submit" class="ml-2"></input>
+                    <p></p>
+                </fieldset>
+            </form>
+        </div>
+        <br />
+        <h3 id="recipeHeader" class="text-center"></h3>
+        <div class="container">
+            <div class="album py-2 bg-light mb-3">
+                <div class="container no-list-decortions">
+                    <div class="row" id="recipesResults">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="foot-container" class="bg-light"></div>
+        <script>
+            window.onload = function () {
+                $.get("nav.html", function (data) {
+                    $("#nav-container").html(data);
+                })
+                $.get("foot.html", function (data) {
+                    $("#foot-container").html(data);
+                })
+            }
+        </script>
+        <script src="js/jquery-3.4.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <script src="js/spoonacular.js"></script>
+    </body>
+</html>
+

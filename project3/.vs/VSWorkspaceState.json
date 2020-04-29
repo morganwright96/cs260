@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\gamestore",
+    "\\gamestore\\public",
+    "\\gamestore\\public\\images",
+    "\\gamestore\\src",
+    "\\gamestore\\src\\components",
+    "\\gamestore\\src\\router",
+    "\\gamestore\\src\\views"
+  ],
+  "SelectedNode": "\\gamestore\\src\\router\\index.js",
+  "PreviewInSolutionExplorer": false
+}
